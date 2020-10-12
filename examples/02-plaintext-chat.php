@@ -60,12 +60,12 @@ $connector->connect('127.0.0.1:' . $port)->then(function (React\Socket\Connectio
             $buffer = substr($buffer, $pos + 1);
         }
     });
-});
+}, 'printf');
 
 $socket = new \React\Socket\Server(isset($argv[1]) ? '0.0.0.0:' . $argv[1] : '0.0.0.0:0', $loop);
 $http->listen($socket);
 
-echo 'ssServer now listening on ' . $socket->getAddress() . ' (port is first parameter)' . PHP_EOL;
+echo 'Server now listening on ' . $socket->getAddress() . ' (port is first parameter)' . PHP_EOL;
 echo 'Connecting to plain text chat on port ' . $port . ' (port is second parameter)' . PHP_EOL;
 
 $loop->run();
