@@ -21,6 +21,6 @@
     },
     "require-dev": {
         "clue/redis-react": "^2.4",
-        "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35"
+        "phpunit/phpunit": "^5.0 || ^4.8"
     }
 }
